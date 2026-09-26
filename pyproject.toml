@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tech-earnings-sync"
+version = "0.1.0"
+description = "Automated Big Tech Earnings Newsletter Parser and NotebookLM Sync Pipeline"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Ralph PM", email = "ralph.ypj@gmail.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+tech-earnings-sync = "tech_earnings_sync.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
